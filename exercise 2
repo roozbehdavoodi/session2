@@ -1,0 +1,32 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("How many grades do you want to calculate?");
+        int grades = input.nextInt();
+        double totalscore = 0;
+        double totalcoefficient = 0;
+        double score = 0;
+        double coefficient = 0;
+        double average;
+        for (int i = 1; i<= grades; i++) {
+           System.out.println("Enter your lesson score");
+           score = input.nextDouble();
+           System.out.println("Enter your lesson coefficient");
+           coefficient = input.nextDouble();
+           totalscore =totalscore+(score*coefficient);
+           totalcoefficient = totalcoefficient + coefficient;
+        }
+        average=totalscore/totalcoefficient;
+        if (average<12){
+            System.out.println(average + "\nconditional");
+        }
+        else {
+            System.out.println(average);
+        }
+    }
+}
