@@ -1,0 +1,124 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Select the desired geometric shape:\n" +
+                "1)square\n" +
+                "2)rectangle\n" +
+                "3)trapeze\n" +
+                "4)lozenge\n" +
+                "5)parallelogram\n" +
+                "6)Equilateral triangle\n" +
+                "7)Isosceles triangle\n" +
+                "8)Right triangle\n" +
+                "9)circle\n");
+        int choice = input.nextInt();
+        switch (choice) {
+            case 1:
+                System.out.println("Enter the size of the sides:");
+                double side = input.nextInt();
+                System.out.println("square perimeter:" + side*4);
+                System.out.println("square area:" + side*side);
+                break;
+            case 2:
+                System.out.println("enter the size of large side:");
+                double largeside = input.nextInt();
+                System.out.println("enter the size of the short side:");
+                double shortside = input.nextInt();
+                System.out.println("rectangle perimeter:" + (largeside+shortside)*2);
+                System.out.println("rectangle area:" + shortside*largeside);
+                break;
+            case 3:
+                System.out.println("enter the size of the large side:");
+                double largesidet = input.nextInt();
+                System.out.println("enter the size of the short side:");
+                double shortsidet = input.nextInt();
+                System.out.println("enter the size of sides:");
+                double sides = input.nextInt();
+                System.out.println("enter the size of the height:");
+                double height = input.nextInt();
+                System.out.println("trapeze perimeter:" + (largesidet+shortsidet+sides));
+                System.out.println("trapeze area:" + ((largesidet+shortsidet)*height)/2);
+                break;
+            case 4:
+                System.out.println("enter the size of large diameter:");
+                double largediameter = input.nextInt();
+                System.out.println("enter the size of the short diameter:");
+                double shortdiameter = input.nextInt();
+                System.out.println("enter the size of sides:");
+                double sidesl = input.nextInt();
+                System.out.println("lozenge perimeter:" + sidesl*4);
+                System.out.println("lozenge area:" + (largediameter*shortdiameter)/2);
+                break;
+            case 5:
+                System.out.println("enter the size of the large side:");
+                double largesidep = input.nextInt();
+                System.out.println("enter the size of the short side:");
+                double shortsidep = input.nextInt();
+                System.out.println("enter the size of the height:");
+                double heightp = input.nextInt();
+                System.out.println("parallelogram perimeter:" + (largesidep+shortsidep)*2);
+                System.out.println("parallelogram area:" + largesidep*heightp);
+                break;
+            case 6:
+                System.out.println("enter the size of the sides:");
+                double sideset = input.nextInt();
+                System.out.println("enter the size of the height:");
+                double heightet = input.nextInt();
+                System.out.println("Equilateral triangle perimeter:" + sideset*3);
+                System.out.println("Equilateral triangle area:" + (sideset*heightet)/2);
+                break;
+            case 7:
+                System.out.println("enter the size of equal sides:");
+                double equalsides = input.nextInt();
+                System.out.println("enter the size of the other side:");
+                double otherside = input.nextInt();
+                System.out.println("enter the size of the height:");
+                double heightit = input.nextInt();
+                System.out.println("Isosceles triangle perimeter:" + ((equalsides*2)+otherside));
+                System.out.println("Isosceles triangle area:" + (otherside*heightit)/2);
+                break;
+            case 8:
+                System.out.println("enter the size of the height side:");
+                double heightside = input.nextInt();
+                System.out.println("enter the size of the hypotenuse:");
+                double hypotenuse = input.nextInt();
+                System.out.println("enter the size of the down side:");
+                double downside = input.nextInt();
+                System.out.println("Right triangle perimeter:" + (heightside+hypotenuse+downside));
+                System.out.println("Right triangle area:" + (heightside*downside)/2);
+                break;
+            case 9:
+                System.out.println("enter the size of the radius:");
+                double radius = input.nextInt();
+                System.out.println("which amount of pi constant you need?\n" +
+                        "1)3\n" +
+                        "2)3.14\n");
+                int pi = input.nextInt();
+                switch (pi){
+                    case 1:
+                        System.out.println("circle perimeter:" + (radius*2)*3);
+                        System.out.println("circle area:" + (radius*radius)*3);
+                        break;
+                    case 2:
+                        System.out.println("circle perimeter:" + (radius*2)*3.14);
+                        System.out.println("circle area:" + (radius*radius)*3.14);
+                        break;
+                }
+
+        }
+
+
+        }
+
+
+
+
+
+
+    }
+
